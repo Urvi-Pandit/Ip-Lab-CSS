@@ -10,110 +10,151 @@
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:ital,wght@0,300;1,100;1,400&display=swap');
-    *{
+
+    * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
     }
+
     body {
         font-family: "Poppins", sans-serif;
         margin: 0.7rem;
-        text-align: center;
+      
     }
-    input, select {
+
+    input,
+    select {
         margin-bottom: 1rem;
     }
+
     button {
         border-radius: 7px;
         padding: 0.4rem 0.8rem;
         display: inline-block;
-        margin-top: 1rem;
-        box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.2);
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
         cursor: pointer;
         transition: all 500ms ease-in-out;
         background-color: rgb(54, 114, 167);
         color: white;
     }
+
     button:hover {
         transform: scale(1.05);
         background-color: yellowgreen;
     }
+
     img {
         display: block;
         margin-left: 100px;
     }
+
     .preview {
         display: flex;
+        flex-direction: column;
         margin-right: 200px;
         align-items: right;
         justify-content: right;
         position: relative;
-        bottom: 50%;
+        bottom: 35%;
         position: absolute;
         left: 50%;
     }
+
     .cart {
+        display: flex;
         justify-content: center;
-        align-content: center;
+
+    }
+
+    .form {
+        margin-right: 25vw;
+    }
+    .chooseColour{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
     }
 </style>
 
-<body style="background-image: linear-gradient(to bottom right, rgba(255,0,0,0), rgb(65, 88, 102))">
+<body style="padding-top:6vh;background-image: linear-gradient(to bottom right, rgba(255,0,0,0), rgb(65, 88, 102));">
+    <h3 style="font-size: 3rem; text-align: center; padding-bottom: 5vh;">Order Details</h3>
     <form action="" enctype="multipart/form-data" method="put">
         <div class="cart">
-        <h3>Order Details</h3>
-        <div>
-        <label for="tagline">Enter Tagline:</label>
-        <input type="text" name="tagline" id="tagline"><br>
-        <label for="color">Choose Color:</label><br>
-        <input type="radio" id="red" name="color" value="Red">
-        <label for="red">Red</label><br>
-        <input type="radio" id="white" name="color" value="White">
-        <label for="white">White</label><br>
-        <input type="radio" id="blue" name="color" value="blue">
-        <label for="blue">Blue</label><br>
-        <label for="size">Select Size:</label><br>
-        <select id="size" name="size">
-            <option value="25">XS</option>
-            <option value="30">S</option>
-            <option value="35">M</option>
-            <option value="40">L</option>
-            <option value="40">XL</option>
-        </select><br>
-        <label for="quantity">Quantity: </label><br>
-        <select id="quantity" name="quantity">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-        </select></div>
-        <div>
-        <label for="price">Total Order Price: <strong>Rs.599</strong></label><br><br>
-        <label for="payment_options">Payment Options:</label><br>
-        <input type="radio" id="cc" name="color" value="Credit/Debit Card">
-        <label for="cc">Credit/Debit Card</label><br>
-        <input type="radio" id="upi" name="color" value="UPI">
-        <label for="upi">UPI</label><br>
-        <input type="radio" id="crypto" name="color" value="Crypto">
-        <label for="crypto">Cash on Delivery</label></div>
-        <div>
-        <label for="address">Delivery Address:</label><br>
-        <input type="text" id="address"><br>
-        <button type="submit">Place Order</button></div>
-        <div>
-        <p>
-            <b><i>Please note:</i></b> You shall recieve your order within 5-7 business days.<br>
-            You can track your order by logging in your account on our website.
-        </p>
-        <h3><strong>Happy Shopping!</strong></h3>
+            <div class="form">
+                <label for="tagline"><b>Enter Tagline:</b></label>
+                <input type="text" name="tagline" id="tagline"><br>
+                <div class="chooseColour">
+                    <label for="color"><b>Choose Color:</b></label>
+                    <div>
+                        <input type="radio" id="red" name="color" value="Red">
+                        <label for="red">Red</label><br>
+                    </div>
+                    <div>
+                        <input type="radio" id="white" name="color" value="White">
+                <label for="white">White</label><br>
+                    </div>
+                    <div>
+                        <input type="radio" id="blue" name="color" value="blue">
+                        <label for="blue">Blue</label><br>
+                    </div>
+                </div>
+                <label for="size"><b>Select Size:</b></label><br>
+                <select id="size" name="size">
+                    <option value="25">XS</option>
+                    <option value="30">S</option>
+                    <option value="35">M</option>
+                    <option value="40">L</option>
+                    <option value="40">XL</option>
+                </select><br>
+                <label for="quantity"><b>Quantity: </b></label><br>
+                <select id="quantity" name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <div>
+                    <label for="price"><b>Total Order Price:</b> <strong>Rs.599</strong></label><br><br>
+                    <label for="payment_options"><b>Payment Options:</b></label><br>
+                    <input type="radio" id="cc" name="color" value="Credit/Debit Card">
+                    <label for="cc">Credit/Debit Card</label><br>
+                    <input type="radio" id="upi" name="color" value="UPI">
+                    <label for="upi">UPI</label><br>
+                    <input type="radio" id="crypto" name="color" value="Crypto">
+                    <label for="crypto">Cash on Delivery</label>
+                </div>
+                <div style="margin-top: 5px;">
+                    <label for="address"><b>Delivery Address:</b></label><br>
+                    <input type="text" id="address"><br>
+                    <button type="submit">Place Order</button>
+                </div>
+            </div>
+
         </div>
         <div class="preview">
-            <h4>Your Order:</h4> <br>
+            <h4 style="padding-left: 10vw;"><b>Your Order:</b></h4> <br>
             <img width="250px" src="https://raw.githubusercontent.com/Urvi-Pandit/IP-lab/main/IP%20lab/images.jpg"
                 alt="">
-            </div>
-    </div>
+        </div>
+        </div>
     </form>
+    <div class="text" style="margin-top: 5vh;">
+        <div>
+            <p>
+                <b><i>Please note:</i></b> You shall recieve your order within 5-7 business days.<br>
+                You can track your order by logging in your account on our website.
+            </p>
+            <h3 style="text-align: center;"><strong>Happy Shopping!</strong></h3>
+        </div>
+       
+    </div>
 </body>
 
 </html>
