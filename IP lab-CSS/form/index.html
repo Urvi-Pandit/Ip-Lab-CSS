@@ -44,9 +44,11 @@
         background-color: yellowgreen;
     }
 
-    img {
+    #img {
         display: block;
         margin-left: 100px;
+        border-style: solid;
+        border-width: 30px;
     }
 
     .preview {
@@ -89,7 +91,7 @@
         <div class="cart">
             <div class="form">
                 <label for="tagline"><b>Enter Tagline:</b></label>
-                <input type="text" name="tagline" id="tagline"><br>
+                <input type="text" name="tagline" id="tagline" style="width: 100%; box-sizing: border-box; box-shadow:2px 2px 2px 1px rgba(0, 0, 0, 0.2); padding: 12px 20px;"><br>
                 <div class="chooseColour">
                     <label for="color"><b>Choose Color:</b></label>
                     <div>
@@ -132,7 +134,7 @@
                 </div>
                 <div style="margin-top: 5px;">
                     <label for="address"><b>Delivery Address:</b></label><br>
-                    <input type="text" id="address"><br>
+                    <input type="text" id="address" style="width: 100%; box-sizing: border-box; box-shadow:2px 2px 2px 1px rgba(0, 0, 0, 0.2); padding: 12px 20px;"><br>
                     <button type="submit">Place Order</button>
                 </div>
             </div>
@@ -141,7 +143,7 @@
         <div class="preview">
             <h4 style="padding-left: 10vw;"><b>Your Order:</b></h4> <br>
             <img width="250px" src="https://raw.githubusercontent.com/Urvi-Pandit/IP-lab/main/IP%20lab/images.jpg"
-                alt="">
+                alt="" id="img">
         </div>
         </div>
     </form>
